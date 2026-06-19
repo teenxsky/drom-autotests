@@ -4,6 +4,17 @@ help:
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
 
 
+#--------------- ОСНОВНЫЕ КОМАНДЫ ---------------#
+
+.PHONY: run-tests
+run-tests: ## Запустить тесты
+	@uv run pytest tests
+
+.PHONY: run-tests-ci
+run-tests-ci: ## Запустить тесты для CI
+	@HEADLESS=1 USE_SELENIUM_MANAGER=1 $(MAKE) run-tests
+
+
 #--------------- КОМАНДЫ ДЛЯ КОД-СТИЛЯ ---------------#
 
 .PHONY: ty-check
