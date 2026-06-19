@@ -1,0 +1,12 @@
+[project]
+name = "drom-autotests"
+version = "0.1.0"
+description = "Автоматическое тестирование сайта Drom"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "allure-pytest>=2.16.0",
+    "pytest>=9.1.0",
+    "selenium>=4.45.0",
+    "webdriver-manager>=4.1.2",
+]
