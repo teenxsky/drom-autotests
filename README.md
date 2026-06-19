@@ -12,7 +12,7 @@ pytest** по паттерну **Page Object**, с явными ожидания
 > python3.14+
 
 ```bash
-uv install
+uv sync
 ```
 
 Браузер Chrome должен быть установлен. ChromeDriver скачивается автоматически
@@ -22,6 +22,8 @@ uv install
 
 ```bash
 uv run pytest tests/
+# или
+make run-tests
 ```
 
 ## Allure-отчёт

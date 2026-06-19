@@ -65,6 +65,7 @@ ignore = [
     "ANN002", # Missing type annotation for *args
     "ANN003", # Missing type annotation for **kwargs
     "TD003", # Missing issue link for this TODO
+    "S101",
 ]
 
 fixable = ["ALL"]
